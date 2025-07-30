@@ -531,21 +531,50 @@ html, body {
 
 
 @media screen and (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
   .consulting-container {
     flex-direction: column;
+    width: 100%;
+    height: auto;
     padding: 30px 15px;
+    background-size: cover;
+    background-position: center;
   }
 
   .consulting-content {
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    padding: 20px 10px;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
   }
 
-  .consulting-left,
+  .consulting-left {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .consulting-left img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
   .consulting-right {
+    order: 2;
     width: 100%;
     max-width: 100%;
     padding: 10px;
@@ -553,31 +582,22 @@ html, body {
   }
 
   .consulting-right h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin: 15px 0;
   }
 
   .consulting-right li {
     font-size: 16px;
+    line-height: 1.4;
+    list-style-position: inside;
+    margin-bottom: 10px;
   }
 
   .consulting-button {
     width: 90%;
     font-size: 16px;
     padding: 12px 20px;
-    margin-top: 20px;
-  }
-
-  .consulting-left img {
-    width: 100%;
-    height: auto;
-  
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
+    margin: 15px auto;
   }
 
   .fakeBody,
@@ -639,44 +659,6 @@ html, body {
     margin: 8px 0;
   }
 
-  .consulting-container {
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .consulting-content {
-    flex-direction: column;
-    width: 100%;
-    padding: 20px 10px;
-    box-sizing: border-box;
-  }
-
-  .consulting-left,
-  .consulting-right {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .consulting-left img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .consulting-right h1 {
-    font-size: 28px;
-    margin: 15px 0;
-  }
-
-  .consulting-right li {
-    font-size: 16px;
-    line-height: 1.4;
-    list-style-position: inside;
-    margin-bottom: 10px;
-  }
-
   .Featured h1,
   .Featured h3 {
     text-align: center;
@@ -690,8 +672,37 @@ html, body {
     padding: 20px 10px;
   }
 
-  .about, .products, .contact,
-  .about-content, .product-content, .contact-content {
+  .f-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+
+  .about {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+  }
+
+  .products {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+  }
+
+  .contact {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    text-align: center;
+  }
+
+  .about-content,
+  .product-content,
+  .contact-content {
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
@@ -722,7 +733,6 @@ html, body {
   }
 
   .prebuilt-button,
-  .consulting-button,
   .purchase-button {
     width: 90%;
     font-size: 16px;
@@ -737,4 +747,4 @@ html, body {
     justify-content: center;
     gap: 5px;
   }
-
+}
