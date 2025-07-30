@@ -78,7 +78,7 @@
 	font-weight: 500;
 	font-size: 20px;
 }
-.filter-bar {
+.filters {
   background-color: #202020;
   color: #ffffff;
   padding: 15px 30px;
@@ -91,8 +91,8 @@
   font-family: helvetica, sans-serif;
 }
 
-.filter-bar select,
-.filter-bar button {
+.filters select,
+.filters button {
   background-color: #303030;
   color: #ffffff;
   border: none;
@@ -103,8 +103,8 @@
   cursor: pointer;
 }
 
-.filter-bar select:hover,
-.filter-bar button:hover {
+.filters select:hover,
+.filters button:hover {
   background-color: #404040;
 }
 
