@@ -187,58 +187,6 @@ html, body {
 	border-radius: 5px;
 	object-fit: contain;
 }
-.consulting-container {
-	display: block;
-	width: 100%;
-	height: 800px;
-	background-image: url("background.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.consulting-container .consulting-content {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-content: center;
-	height: 800px;
-}
-.consulting-container .consulting-content .consulting-left {
-	display: block;
-	width: 50%;
-	height: 800px;
-}
-.consulting-container .consulting-content .consulting-left  img {
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: contain;
-}
-.consulting-container .consulting-content .consulting-right {
-	display: flex;
-	flex-direction: column;
-	width: 50%;
-	height: 800px;
-	justify-content: center;
-	align-items: flex-start;
-	color: #FFF;
-	font-family: helvetica, sans-serif;
-}
-.consulting-container .consulting-content .consulting-right ul {
-	list-style-type: '- ';
-}
-.consulting-container .consulting-content .consulting-right h1 {
-	font-size: 70px;
-	font-weight: 700;
-	font-family: helvetica, sans-serif;
-	margin-bottom: 35px;
-	margin-top: 35px;
-}
-.consulting-container .consulting-content .consulting-right li {
-	font-size: 30px;
-	font-weight: 350;
-	font-family: helvetica, sans-serif;
-
-}
-
 .bar {
 	display: block;
 	height: 3px;
@@ -419,6 +367,66 @@ html, body {
 .prebuilt-button:active {
   	transform: scale(0.95);
 }
+.consulting-container {
+  display: flex;
+  width: 100%;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.consulting-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.consulting-left,
+.consulting-right {
+  flex: 1 1 400px;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.consulting-left img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.consulting-right {
+  color: #FFF;
+  font-family: helvetica, sans-serif;
+  padding: 20px;
+}
+
+.consulting-right h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.consulting-right ul {
+  list-style-type: "- ";
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.consulting-right li {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
 .consulting-button {
 	text-decoration: none;
 	margin: 30px;
@@ -523,6 +531,47 @@ html, body {
 
 
 @media screen and (max-width: 768px) {
+  .consulting-container {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .consulting-content {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .consulting-left,
+  .consulting-right {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .consulting-right h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .consulting-right li {
+    font-size: 16px;
+  }
+
+  .consulting-button {
+    width: 90%;
+    font-size: 16px;
+    padding: 12px 20px;
+    margin-top: 20px;
+  }
+
+  .consulting-left img {
+    width: 100%;
+    height: auto;
+  
   html, body {
     width: 100%;
     overflow-x: hidden;
