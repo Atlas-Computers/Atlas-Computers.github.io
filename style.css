@@ -532,7 +532,7 @@ html, body {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 480px) {
   @import url("https://use.frontawsome.com/releases/v6.5.1/css/all.css"); 
 html, a {
 	text-decoration: none;
