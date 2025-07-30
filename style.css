@@ -522,80 +522,144 @@ html, body {
 }
 
 
-@media (max-width: 768px) {
-  .head-container {
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: #000;
-    width: 100%;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 110px;
-    align-items: center;
-}
-.head-container .head-logoBx img {
-    position: relative;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 5px;
-    object-fit: contain;
-    padding-left: 115px;
-}
-  .header-links a {
-    font-size: 18px;
-    margin: 5px 0;
+@media screen and (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+    font-size: 16px;
   }
 
-  .consulting-container, 
+  .fakeBody,
+  .container,
+  .consulting-container,
   .consulting-content,
-  .consulting-left, 
-  .consulting-right {
+  .f-container {
     flex-direction: column;
     width: 100%;
-    height: auto;
-    text-align: center;
-    align-items: center;
-  }
-
-  .consulting-right h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .consulting-right li {
-    font-size: 20px;
-  }
-
-  .container {
-    flex-direction: column;
     padding: 10px;
+    align-items: center;
   }
 
   .container .card {
+    flex: none;
     max-width: 90%;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
   }
 
-  .featured-heading {
-    font-size: 40px;
+  .container .card .imgBx {
+    padding-left: 0;
   }
 
-  .featured-slogan {
-    font-size: 25px;
+  .container .card .content,
+  .container .card .content-h,
+  .container .card .content .card-desc {
+    text-align: center;
+  }
+
+  .head-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .header-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: auto;
+  }
+
+  .header-links a {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+
+  .head-container .head-logoBx,
+  .head-container .head-logoBx img {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .consulting-container,
+  .consulting-left,
+  .consulting-right {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .consulting-right h1 {
+    font-size: 36px;
+  }
+
+  .consulting-right li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .Featured h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .Featured h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .footer {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .about-content,
+  .product-content,
+  .contact-content,
+  .about,
+  .products,
+  .contact {
+    width: 90%;
+    margin-bottom: 15px;
+    text-align: center;
   }
 
   .socials-container ul {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
+    padding: 0;
   }
 
   .socials-container a {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 
   .fa-brands {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .prebuilt-button,
+  .consulting-button,
+  .purchase-button {
+    width: 90%;
+    font-size: 16px;
+    margin: 15px auto;
+    padding: 12px 20px;
+  }
+
+  .price-container {
+    flex-direction: column;
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .bar {
+    display: none;
   }
 }
