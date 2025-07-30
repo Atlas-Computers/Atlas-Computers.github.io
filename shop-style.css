@@ -86,11 +86,13 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   font-family: helvetica, sans-serif;
+  margin-top: 20px;
+  width: 90%;
+  justify-self: center;
 }
-
 .filters select,
 .filters button {
   background-color: #303030;
@@ -102,12 +104,14 @@
   transition: background 0.3s ease;
   cursor: pointer;
 }
-
 .filters select:hover,
 .filters button:hover {
   background-color: #404040;
 }
-
+.filters label {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .products{
 	display: flex;
 	flex-direction: column;
