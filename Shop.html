@@ -22,7 +22,27 @@
     </div>
     <div class="bar">
     </div>
-    <section class="product-container">
+    <div id="filters">
+     <label for="cpuFilter">CPU Brand:</label>
+      <select id="cpuFilter">
+        <option value="">All</option>
+        <option value="Intel">Intel</option>
+        <option value="AMD">AMD</option>
+      </select>
+    
+      <label for="gpuFilter">GPU Brand:</label>
+      <select id="gpuFilter">
+        <option value="">All</option>
+        <option value="NVIDIA">NVIDIA</option>
+        <option value="AMD">AMD</option>
+      </select>
+    
+      <label for="priceRange">Max Price: <span id="priceValue">2000</span></label>
+      <input type="range" id="priceRange" min="0" max="2000" step="50" value="2000">
+    
+      <button onclick="applyFilters()">Filter</button>
+    </div>
+    <section class="product-container" data-cpu="Intel" data-gpu="NVIDIA" data-price="1299.99">
         <div class="product">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
@@ -30,77 +50,77 @@
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="129.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="AMD" data-gpu="NVIDIA" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="AMD" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="799.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="AMD" data-gpu="AMD" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
             <button>View Details</button>
         </div>
-        <div class="product">
+        <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
@@ -136,4 +156,30 @@
       </div>
     </div>
   </body>
+  <script>
+   document.getElementById("priceRange").addEventListener("input", function() {
+   document.getElementById("priceValue").textContent = this.value;
+    });
+    
+    function applyFilters() {
+      const cpuBrand = document.getElementById("cpuFilter").value;
+      const gpuBrand = document.getElementById("gpuFilter").value;
+      const maxPrice = parseFloat(document.getElementById("priceRange").value);
+    
+      const products = document.querySelectorAll(".product");
+    
+      products.forEach(product => {
+        const cpu = product.getAttribute("data-cpu");
+        const gpu = product.getAttribute("data-gpu");
+        const price = parseFloat(product.getAttribute("data-price"));
+    
+        const matches =
+          (!cpuBrand || cpu === cpuBrand) &&
+          (!gpuBrand || gpu === gpuBrand) &&
+          price <= maxPrice;
+    
+        product.style.display = matches ? "block" : "none";
+      });
+    }
+  </script>
 </html>
