@@ -521,8 +521,61 @@ html, body {
 }
 }
 
+
 @media (max-width: 768px) {
-	
+  .head-container, .header-links, .f-container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .header-links a {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .consulting-container, 
+  .consulting-content,
+  .consulting-left, 
+  .consulting-right {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+  }
+
+  .consulting-right h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .consulting-right li {
+    font-size: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .container .card {
+    max-width: 90%;
+  }
+
+  .featured-heading {
+    font-size: 40px;
+  }
+
+  .featured-slogan {
+    font-size: 25px;
+  }
+
+  .socials-container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .socials-container a {
     width: 70px;
     height: 70px;
@@ -532,89 +585,3 @@ html, body {
     font-size: 28px;
   }
 }
-
-.head-container {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
-    padding: 10px 0;
-  }
-  .head-logoBx {
-    order: -1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .header-links {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-    margin: 5px 0;
-  }
-  .header-links a {
-    font-size: 18px;
-    margin: 5px 0;
-  }
-
-  .consulting-content {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
-    padding: 20px 10px;
-  }
-  .consulting-left,
-  .consulting-right {
-    width: 100%;
-    text-align: center;
-  }
-  .consulting-right h1 {
-    font-size: 40px;
-  }
-  .consulting-right li {
-    font-size: 20px;
-    text-align: left;
-    margin-left: 15px;
-  }
-
-  .featured-heading {
-    font-size: 40px;
-  }
-  .featured-slogan {
-    font-size: 24px;
-  }
-
-  body, html {
-    overflow-x: hidden;
-  }
-
-  .prebuilt-button,
-  .consulting-button,
-  .purchase-button {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block;
-  }
-
-  .f-container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 20px 10px;
-  }
-  .about,
-  .products,
-  .contact {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .socials-container ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
- 
