@@ -28,7 +28,7 @@ html, body {
 	flex-wrap: wrap;
 	padding: 30px;
 	padding-top: 60px;
-    	padding-bottom: 380px;
+    	padding-bottom: 60px;
 	font-family: helvetica, sans-serif;
 }
 .container .card {
