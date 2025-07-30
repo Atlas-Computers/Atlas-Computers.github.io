@@ -520,3 +520,67 @@ html, body {
 	}
 }
 }
+
+@media (max-width: 768px) {
+  .head-container, .header-links, .f-container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .header-links a {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .consulting-container, 
+  .consulting-content,
+  .consulting-left, 
+  .consulting-right {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+  }
+
+  .consulting-right h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .consulting-right li {
+    font-size: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .container .card {
+    max-width: 90%;
+  }
+
+  .featured-heading {
+    font-size: 40px;
+  }
+
+  .featured-slogan {
+    font-size: 25px;
+  }
+
+  .socials-container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .socials-container a {
+    width: 70px;
+    height: 70px;
+  }
+
+  .fa-brands {
+    font-size: 28px;
+  }
+}
