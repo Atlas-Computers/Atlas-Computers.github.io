@@ -28,7 +28,6 @@ html, body {
 	flex-wrap: wrap;
 	padding: 30px;
 	padding-top: 60px;
-    	padding-bottom: 380px;
 	font-family: helvetica, sans-serif;
 }
 .container .card {
@@ -149,7 +148,6 @@ html, body {
 	background-color: #000;
 	width: 100%;
 	align-items: center;
-	flex-wrap: wrap;
 	height: 110px;
 	justify-content: center;
 }
@@ -167,7 +165,7 @@ html, body {
 	font-size: 23px;
 	font-weight: 700;
 	text-decoration: none;
-	tranistion: 0.3s;
+	transition: 0.3s;
 }
 .header-links a:hover {
 	color: #dc2430;
@@ -187,58 +185,56 @@ html, body {
 	border-radius: 5px;
 	object-fit: contain;
 }
-.consulting-container {
-	display: block;
-	width: 100%;
-	height: 800px;
-	background-image: url("background.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.consulting-container .consulting-content {
+.consulting-content {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-content: center;
-	height: 800px;
+	height: auto;
+	min-height: 800px;
+	background-image: url("background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:100%;
 }
-.consulting-container .consulting-content .consulting-left {
+ .consulting-content .consulting-left {
 	display: block;
 	width: 50%;
-	height: 800px;
+	height: auto;
+	min-height: 800px;
 }
-.consulting-container .consulting-content .consulting-left  img {
+ .consulting-content .consulting-left  img {
 	max-width: 100%;
 	max-height: 100%;
 	object-fit: contain;
 }
-.consulting-container .consulting-content .consulting-right {
+ .consulting-content .consulting-right {
 	display: flex;
 	flex-direction: column;
 	width: 50%;
-	height: 800px;
+	height: auto;
+	min-height: 800px;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	color: #FFF;
 	font-family: helvetica, sans-serif;
 }
-.consulting-container .consulting-content .consulting-right ul {
+ .consulting-content .consulting-right ul {
 	list-style-type: '- ';
 }
-.consulting-container .consulting-content .consulting-right h1 {
+ .consulting-content .consulting-right h1 {
+	text-align: center;
 	font-size: 70px;
 	font-weight: 700;
 	font-family: helvetica, sans-serif;
 	margin-bottom: 35px;
 	margin-top: 35px;
 }
-.consulting-container .consulting-content .consulting-right li {
+ .consulting-content .consulting-right li {
 	font-size: 30px;
 	font-weight: 350;
 	font-family: helvetica, sans-serif;
-
 }
-
 .bar {
 	display: block;
 	height: 3px;
@@ -258,6 +254,7 @@ html, body {
 	font-family: helvetica, sans-serif;
 }
 .Featured h1 {
+	text-align: center;
 	justify-self: center;
 	align-self: center;
 	font-size: 60px;
@@ -278,19 +275,19 @@ html, body {
 	align-items: center;
 	background: #444444;
 	margin: 0px;
-	height: 200px;
+	height: auto;
 	margin-top: 15px;
 }
 .f-container{
 	display: flex;
 	flex-direction: row;
-	height: 200px;
+	height: auto;
 	width: 100%;
 	margin-top: auto;
 	margin-bottom: auto;
 	align-content: center;
 	justify-content: space-evenly;
-
+	flex-wrap: wrap;
 }
 .about-content{
 	display: flex;
@@ -422,7 +419,6 @@ html, body {
 .consulting-button {
 	text-decoration: none;
 	margin: 30px;
-	margin-left: 130px;
 	justify-self: center;
 	padding: 15px 30px;
 	text-align: center;
@@ -519,4 +515,76 @@ html, body {
 		--angle: 360deg;
 	}
 }
+
+@media only screen and (max-width: 768px) {
+  .consulting-content{
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	min-height: auto;
+  }
+  .consulting-content .consulting-left, .consulting-content .consulting-right {
+	min-height: auto;
+  }
+  .consulting-content .consulting-left{
+	visibility: hidden;
+	height: 100px;
+	min-height:100px;
+	max-height: 100px;
+  }
+  .consulting-content .consulting-right{
+	width: auto;
+  }
+  .consulting-content .consulting-right h1{
+	font-size: 50px;
+  }
+  .consulting-content .consulting-right li{
+	font-size: 25px;
+  }
+  .head-container{
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+  }
+  .head-container .head-logoBx {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+	width: 400px;
+	height: 50px;
+	justify-items: center;
+	padding-bottom: 5px;
+  }
+  .head-container .head-logoBx .logo-link{
+	height:100%
+  }
+  .footer{
+	padding-bottom: 40px;
+  }
+  .f-container{
+	flex-direction: column;
+	height: auto;
+	width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+	align-content: center;
+	justify-content: center;
+  }
+  .about, .contact, .products, .about-content, .product-content, .contact-content{
+	align-content: flex-start;
+  }
+  .Featured h3{
+	text-align: center;
+	width: 452px;
+	margin: 0px;
+  }
+  .socials-container{
+	width: auto;
+  }
+  .socials-container ul{
+	width: 260px;
+	flex-wrap: wrap;
+  }
 }
