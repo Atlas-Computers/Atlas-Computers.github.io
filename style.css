@@ -547,6 +547,9 @@ html, body {
 	align-items: center;
 	justify-items: center;
   }
+  .head-container .header-links {
+	  width: 100%;
+  }
   .head-container .head-logoBx {
 	display: flex;
 	flex-direction: row;
@@ -588,3 +591,4 @@ html, body {
 	flex-wrap: wrap;
   }
 }
+
