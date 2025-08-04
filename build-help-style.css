@@ -340,6 +340,7 @@ html, body {
 	height: auto;
 }
 .guides, .redirect {
+	border: 2px solid crimson;
 	align-items: center;
 	background-color: #202020;
 	color: #ffffff;
