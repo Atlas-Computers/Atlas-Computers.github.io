@@ -340,34 +340,35 @@ html, body {
 }
 
 @media only screen and (max-width: 768px){
-	.head-container{
-		flex-direction: column;
-		align-items: center;
-		justify-items: center;
-	}
-	.head-container .head-logoBx a{
-		height: 100%;
-	}
-	.head-container .header-links {
-		width: 100%;
-	}
-	.head-container .head-logoBx {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		position: relative;
-		width: 400px;
-		height: 50px;
-		justify-items: center;
-		padding-bottom: 5px;
-	}
-	.head-container .head-logoBx .logo-link{
-		height:100%
-	}
-	.shop-container {
-		flex-direction: column;
-	}
-	  .footer{
+.head-container{
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+	gap: 0px;
+}
+.head-container .head-logoBx a{
+	height: 100%;
+}
+.head-container .header-links {
+	width: 100%;
+}
+.head-container .head-logoBx {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+	width: 400px;
+	height: 50px;
+	justify-items: center;
+	padding-bottom: 5px;
+}
+.head-container .head-logoBx .logo-link{
+	height:100%
+}
+.shop-container {
+	flex-direction: column;
+}
+  .footer{
 	padding-bottom: 40px;
 	height: auto;
   }
