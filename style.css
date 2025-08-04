@@ -547,6 +547,7 @@ html, body {
 	flex-direction: column;
 	align-items: center;
 	justify-items: center;
+	gap: 0px;
   }
   .head-container .header-links {
 	  width: 100%;
@@ -592,3 +593,4 @@ html, body {
 	flex-wrap: wrap;
   }
 }
+
