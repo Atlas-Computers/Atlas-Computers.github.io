@@ -97,7 +97,7 @@ html, body {
 	z-index: 0;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #f1f3f5;
+	background-color: #333;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	justify-content: center;
@@ -163,7 +163,7 @@ html, body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #f1f3f5;
+	background-color: #333;
 	width: 344px;
 	height: 137px;
 	margin: 0px;
