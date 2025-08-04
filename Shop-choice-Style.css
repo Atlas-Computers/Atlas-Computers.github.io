@@ -50,7 +50,7 @@ html, body {
 	height: auto;
 	flex-wrap: wrap;
 	gap: 3em;
-	width: 1600px;
+	width: auto;
 	justify-self: center;
 	margin-bottom: 100px;
 }
