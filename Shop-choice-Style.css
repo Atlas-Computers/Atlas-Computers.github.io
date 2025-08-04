@@ -189,6 +189,7 @@ html, body {
 }
 
 .head-container {
+	gap: 200px;
 	margin-top: 0px;
 	display: flex;
 	flex-direction: row;
@@ -385,7 +386,6 @@ html, body {
   .about, .contact, .products{
 	padding-left: 20px;
   }
-}
   .head-container .head-logoBx .logo-link{
 	height:100%
   }
