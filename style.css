@@ -447,7 +447,8 @@ html, body {
 }
 .purchase-button {
 	text-decoration: none;
-	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
 	justify-self: center;
 	padding: 7px 15px;
 	text-align: center;
@@ -591,4 +592,5 @@ html, body {
 	flex-wrap: wrap;
   }
 }
+
 
