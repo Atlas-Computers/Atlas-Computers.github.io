@@ -200,7 +200,7 @@
 	font-size: 23px;
 	font-weight: 700;
 	text-decoration: none;
-	tranistion: 0.3s;
+	transition: 0.3s;
 }
 .header-links a:hover {
 	color: #dc2430;
@@ -281,3 +281,48 @@ body {
     background-color: #c62828; 
 }
 
+@media only screen and (max-width: 768px) {
+	.head-container{
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+  }
+  .head-container .header-links {
+	  width: 100%;
+  }
+  .head-container .head-logoBx {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+	width: 400px;
+	height: 50px;
+	justify-items: center;
+	padding-bottom: 5px;
+  }
+  .head-container .head-logoBx a{
+		height: 100%;
+	}
+  .head-container .head-logoBx .logo-link {
+	height:100%
+  }
+  .footer{
+	padding-bottom: 40px;
+	height: auto;
+  }
+  .f-container{
+	flex-direction: column;
+	height: auto;
+	width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+	align-content: center;
+	justify-content: center;
+  }
+  .about, .contact, .products, .about-content, .product-content-f, .contact-content{
+	align-content: flex-start;
+  }
+  .about, .contact, .products{
+	padding-left: 20px;
+  }
+}
