@@ -1,0 +1,266 @@
+@import url("https://use.frontawsome.com/releases/v6.5.1/css/all.css");  
+html, a {
+	text-decoration: none;
+}
+html, body {  
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	background: #F1F1F1;
+	font-family: helvetica, sans-serif; 
+}
+@property --angle{
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+.head-container {
+	gap: 200px;
+	margin-top: 0px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	background-color: #000;
+	width: 100%;
+	align-items: center;
+	height: 110px;
+	justify-content: center;
+}
+.header-links {
+	display: flex;
+	flex-direction: row;
+	width: 500px;
+	height: 50px;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.header-links a {
+	color: #F1F1F1;
+	font-family: helvetica, sans-serif;
+	font-size: 23px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: 0.3s;
+}
+.header-links a:hover {
+	color: #dc2430;
+}
+.head-container .head-logoBx {
+	position: relative;
+	width: 400px;
+	height: 50px;
+	z-index: 1;
+	justify-items: center;
+	align-items: center;
+}
+.head-container .head-logoBx img {
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 5px;
+	object-fit: contain;
+}
+.bar {
+	display: block;
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	background: linear-gradient(-45deg, #b62020, #cb2424, #fe2e2e, #fe5757, #fe8181);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+}
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #444444;
+	margin: 0px;
+	height: auto;
+	margin-top: 15px;
+}
+.f-container{
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+	align-content: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.about-content{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-evenly;
+	width: 300px;
+	color: #F1F1F1;
+	flex-wrap: wrap;
+	font-weight: 300;
+	font-size: 15px;
+}
+.product-content{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-evenly;
+	width: 300px;
+	color: #F1F1F1;
+	flex-wrap: wrap;
+	font-weight: 300;
+	font-size: 15px;
+}
+.contact-content{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-evenly;
+	width: 300px;
+	color: #F1F1F1;
+	flex-wrap: wrap;
+	font-weight: 300;
+	font-size: 15px;
+}
+.about{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 300px;
+	color: #F1F1F1;
+	font-weight: 500;
+	font-size: 20px;
+}
+.products{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 300px;
+	color: #F1F1F1;
+	font-weight: 500;
+	font-size: 20px;
+}
+.contact{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 300px;
+	color: #F1F1F1;
+	font-weight: 500;
+	font-size: 20px;
+}
+.footer a:link {
+  	text-decoration: none;
+  	color: #F1F1F1;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.footer a:visited {
+  	text-decoration: none;
+	color: #F1F1F1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    width: 80%;
+    height: auto;
+    background-color: #444444;
+    border-radius: 10px;
+    justify-self: center;
+    border: 3px;
+    border-style: solid;
+    border-color: crimson;
+}
+.container .title {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+.container .middle {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    width: 90%;
+}
+.container .ending {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes spin {
+	from{
+		--angle: 0deg;
+	}
+	to {
+		--angle: 360deg;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+    .head-container{
+	flex-direction: column;
+	align-items: center;
+	gap: 0px;
+	justify-items: center;
+  }
+  .head-container .header-links {
+	  width: 100%;
+  }
+  .head-container .head-logoBx {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+	width: 400px;
+	height: 50px;
+	justify-items: center;
+	padding-bottom: 5px;
+  }
+  .head-container .head-logoBx .logo-link{
+	height:100%
+  }
+  .footer{
+	padding-bottom: 40px;
+  }
+  .f-container{
+	flex-direction: column;
+	height: auto;
+	width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+	align-content: center;
+	justify-content: center;
+  }
+  .about, .contact, .products, .about-content, .product-content, .contact-content{
+	align-content: flex-start;
+  }
+.container .title{
+    margin: 0px;
+    font-size: 40px;
+}
+}
