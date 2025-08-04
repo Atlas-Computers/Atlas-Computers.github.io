@@ -475,4 +475,34 @@ html, body {
   .about, .contact, .products, .about-content, .product-content, .contact-content{
 	align-content: flex-start;
   }
+  .seperating-bar{
+	width: 300px;
+	height: 5px;
+	margin-bottom: 10px;
+  }
+  .seperating-bar-small{
+	width: 0px;
+	height: 0px;
+  }
+  .redirect .redirect-imagebox{
+	width: 0px;
+	height: 0px;
+  }
+  .redirect .text {
+	margin-right: 0px;
+  }
+  .guides{
+	width: 70%;
+  }
+  .guides .template-redirect h2 {
+	font-size: 35px;
+  }
+  .guides .guide-imagebox{
+	width: 250px;
+	height: 250px;
+  }
+  .guides .template-redirect {
+	justify-items: center;
+	align-items: center;
+  }
 }
