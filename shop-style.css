@@ -175,6 +175,7 @@
 	animation: gradient 7s ease infinite;
 }
 .head-container {
+	gap: 200px;
 	margin-top: 0px;
 	display: flex;
 	flex-direction: row;
