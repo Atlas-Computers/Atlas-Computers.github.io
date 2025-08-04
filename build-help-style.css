@@ -494,6 +494,10 @@ html, body {
   .guides{
 	width: 70%;
   }
+  .guides, .redirect {
+	margin-left: auto;
+	margin-right: auto;
+  }
   .guides .template-redirect h2 {
 	font-size: 35px;
   }
