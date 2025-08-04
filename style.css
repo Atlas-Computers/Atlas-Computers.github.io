@@ -1,4 +1,4 @@
-@import url("https://use.frontawsome.com/releases/v6.5.1/css/all.css"); 
+@import url("https://use.frontawsome.com/releases/v6.5.1/css/all.css");  
 html, a {
 	text-decoration: none;
 }
@@ -592,5 +592,6 @@ html, body {
 	flex-wrap: wrap;
   }
 }
+
 
 
