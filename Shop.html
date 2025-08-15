@@ -47,14 +47,14 @@
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
-            <button>View Details</button>
+            <button class="view-button" data-product-id="reaper">View Details</button>
         </div>
         <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="1299.99">
             <img src="img2.png" alt="Product 1">
             <h3>Product 1</h3>
             <p class="description">This is a brief description of Product 1. It's perfect for your needs.</p>
             <p class="price">$29.99</p>
-            <button>View Details</button>
+            <button class="view-button" data-product-id="phantom">View Details</button>
         </div>
         <div class="product" data-cpu="Intel" data-gpu="NVIDIA" data-price="129.99">
             <img src="img2.png" alt="Product 1">
@@ -154,6 +154,28 @@
         </div>
       </div>
     </div>
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <div class="modal-body">
+          <div class="modal-left">
+            <img id="modal-image" src="" alt="Product Image">
+          </div>
+          <div class="modal-right">
+            <h2 id="modal-title"></h2>
+
+            <h3>Case Colour</h3>
+            <div id="modal-colors" class="color-options"></div>
+
+            <h3>Extras</h3>
+            <div id="modal-extras" class="extra-options"></div>
+
+            <h3>Specifications</h3>
+            <ul id="modal-specs"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script>
    document.getElementById("priceRange").addEventListener("input", function() {
@@ -180,6 +202,103 @@
         product.style.display = matches ? "block" : "none";
       });
     }
+    const productData = {
+  reaper: {
+    title: "The Reaper",
+    image: "img2.png",
+    colors: ["Black", "White"],
+    extras: ["Extra RAM (+16GB)", "Liquid Cooling (AIO)", "Coloured Cable Extensions"],
+    specs: [
+      "CPU: Intel i7 12700K",
+      "GPU: RTX 4070 Ti",
+      "RAM: 16GB DDR5",
+      "Storage: 1TB NVMe SSD",
+      "PSU: 750W Gold"
+    ]
+  },
+  phantom: {
+    title: "The Phantom",
+    image: "img2.png",
+    colors: ["Black", "white"],
+    extras: ["Extra RAM (+16GB)", "Liquid Cooling (AIO)", "Coloured Cable Extensions"],
+    specs: [
+      "CPU: AMD Ryzen 9 7900X",
+      "GPU: RTX 4080",
+      "RAM: 32GB DDR5",
+      "Storage: 2TB NVMe SSD",
+      "PSU: 850W Gold"
+    ]
+  }
+};
+
+// Open modal when clicking "View here"
+document.querySelectorAll('.view-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const productId = button.getAttribute('data-product-id');
+    const data = productData[productId];
+    if (!data) return;
+
+    // Set title and image
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-image').src = data.image;
+
+    // Populate colors as clickable circles
+    const colorContainer = document.getElementById('modal-colors');
+    colorContainer.innerHTML = "";
+    let selectedColor = null;
+    data.colors.forEach(color => {
+      const circle = document.createElement('div');
+      circle.classList.add('color-circle');
+      circle.style.backgroundColor = color.toLowerCase();
+
+      circle.addEventListener('click', () => {
+        // Remove selection from all
+        document.querySelectorAll('.color-circle').forEach(c => c.classList.remove('selected'));
+        // Add to clicked
+        circle.classList.add('selected');
+        selectedColor = color;
+      });
+
+      colorContainer.appendChild(circle);
+    });
+
+    // Populate extras
+    const extrasContainer = document.getElementById('modal-extras');
+    extrasContainer.innerHTML = "";
+    data.extras.forEach(extra => {
+      const label = document.createElement('label');
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.value = extra;
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(extra));
+      extrasContainer.appendChild(label);
+    });
+
+    // Populate specs
+    const specsList = document.getElementById('modal-specs');
+    specsList.innerHTML = "";
+    data.specs.forEach(spec => {
+      const li = document.createElement('li');
+      li.textContent = spec;
+      specsList.appendChild(li);
+    });
+
+    // Show modal
+    document.getElementById('product-modal').style.display = 'block';
+  });
+});
+
+// Close modal
+document.getElementById('modal-close').addEventListener('click', () => {
+  document.getElementById('product-modal').style.display = 'none';
+});
+window.addEventListener('click', e => {
+  const modal = document.getElementById('product-modal');
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
   </script>
 </html>
 
